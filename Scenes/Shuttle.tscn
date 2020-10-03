@@ -6,14 +6,13 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.63074, 1.6678 )
 
-[node name="Shuttle" type="Area2D"]
+[node name="Shuttle" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="Pivot" type="Position2D" parent="."]
-
-[node name="Sprite" type="Sprite" parent="Pivot"]
-position = Vector2( 0, -32 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -26 )
 texture = ExtResource( 1 )
+offset = Vector2( 0.0205746, -6.10287 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -27.612 )
