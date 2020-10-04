@@ -3,10 +3,12 @@ extends Node
 var planet_health : int
 var ammunitions : int
 var available_astronauts : int
+var score : int
 
 signal planet_health_changed
 signal ammunitions_changed
 signal available_astronauts_changed
+signal game_over
 
 func _ready():
 	reset_game()
@@ -15,6 +17,7 @@ func reset_game():
 	planet_health = 100
 	ammunitions = 10
 	available_astronauts = 7
+	score = 0
 
 func add_ammunition():
 	ammunitions += 1
@@ -31,3 +34,8 @@ func remove_astronaut():
 func remove_health(health):
 	planet_health -= health
 	emit_signal("planet_health_changed")
+	if planet_health <= 0:
+		game_over()
+
+func game_over():
+	emit_signal("game_over")
