@@ -25,13 +25,7 @@ func take_damage(damage: int):
 	health -= damage
 	# Make it smaller
 	inner_circle.scale *= 0.97
-	
-# TEST
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		print("enter")
-		inner_circle.scale *= 0.97
 
 func _on_HitArea_area_entered(area : Area2D):
 	take_damage(10)
-	area.queue_free()
+	area.die()

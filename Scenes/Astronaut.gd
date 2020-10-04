@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var direction := Vector2()
-var speed := 15.0
+var speed := 12.0
 var collision_info
 
 func _process(delta):
