@@ -7,6 +7,8 @@
 extents = Vector2( 7.63074, 0.981888 )
 
 [node name="Shuttle" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

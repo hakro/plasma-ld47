@@ -10,3 +10,11 @@ func _ready():
 
 func _process(delta):
 	position += direction * SPEED * delta
+
+func die():
+	queue_free()
+
+func _on_Enemy_body_entered(astronaut : KinematicBody2D):
+	astronaut.die()
+	die()
+

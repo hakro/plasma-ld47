@@ -41,6 +41,7 @@ radius = 2.31746
 [node name="Loot" type="Area2D" groups=[
 "loot",
 ]]
+collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -48,6 +49,7 @@ modulate = Color( 0.811765, 0.835294, 0.0745098, 1 )
 position = Vector2( -0.458851, -0.417137 )
 frames = SubResource( 7 )
 animation = "shine"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
