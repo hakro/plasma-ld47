@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Circles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Shuttle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -10,3 +11,12 @@ position = Vector2( 160, 90 )
 
 [node name="Shuttle" parent="." instance=ExtResource( 2 )]
 position = Vector2( 160, 90 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 76.1086, 28.2941 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 73.8636, 94.5193 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 103.048, 151.765 )
