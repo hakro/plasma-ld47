@@ -2,7 +2,7 @@ extends Node2D
 
 onready var enemy_scene : PackedScene = preload("res://Scenes/Enemy.tscn")
 onready var spawn_timer : Timer = $SpawnTimer
-const spawn_chance := 0.1
+const spawn_chance := 0.07
 
 func _on_SpawnTimer_timeout():
 	if randf() <= spawn_chance:

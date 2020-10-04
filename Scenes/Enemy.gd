@@ -1,7 +1,7 @@
 extends Area2D
 
 var direction := Vector2()
-const SPEED := 25
+const SPEED := 15
 
 func _ready():
 	var screen_center := get_viewport_rect().size / 2

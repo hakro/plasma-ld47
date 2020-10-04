@@ -15,16 +15,22 @@ position = Vector2( 160, 90 )
 [node name="Spawners" type="Node2D" parent="."]
 
 [node name="EnemySpawner1" parent="Spawners" instance=ExtResource( 3 )]
-position = Vector2( 35.4155, 34.274 )
+position = Vector2( -45.9018, -38.558 )
 
 [node name="EnemySpawner2" parent="Spawners" instance=ExtResource( 3 )]
-position = Vector2( 64.4069, 107.813 )
+position = Vector2( -131.872, 98.0643 )
 
 [node name="EnemySpawner3" parent="Spawners" instance=ExtResource( 3 )]
-position = Vector2( 268.054, 34.274 )
+position = Vector2( 349.944, -57.4259 )
 
 [node name="EnemySpawner4" parent="Spawners" instance=ExtResource( 3 )]
-position = Vector2( 253.204, 124.784 )
+position = Vector2( 364.22, 104.278 )
 
 [node name="EnemySpawner5" parent="Spawners" instance=ExtResource( 3 )]
-position = Vector2( 110.369, 22.9603 )
+position = Vector2( 53.2475, -57.8215 )
+
+[node name="EnemySpawner6" parent="Spawners" instance=ExtResource( 3 )]
+position = Vector2( 290.22, 229.278 )
+
+[node name="EnemySpawner8" parent="Spawners" instance=ExtResource( 3 )]
+position = Vector2( 8.22025, 232.278 )
