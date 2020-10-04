@@ -95,12 +95,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bullet" type="Sprite" parent="HUD"]
+[node name="Ammunition" type="Sprite" parent="HUD"]
 position = Vector2( 6.5923, 33.0358 )
 scale = Vector2( 2.26277, 2.26277 )
 texture = ExtResource( 5 )
 
-[node name="BulletsLabel" type="Label" parent="HUD"]
+[node name="AmmunitionsLabel" type="Label" parent="HUD"]
 margin_left = 17.0722
 margin_top = 22.6811
 margin_right = 34.0722

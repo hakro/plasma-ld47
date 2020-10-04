@@ -6,8 +6,6 @@ onready var outer_cicrle : Sprite = $OuterCircle
 const max_loot := 2
 const loot_scene : PackedScene = preload("res://Scenes/Loot.tscn")
 
-var health := 100
-
 func _process(delta):
 	inner_circle.rotate(delta * 0.1)
 	outer_cicrle.rotate(- delta * 0.2)
@@ -21,8 +19,8 @@ func _on_LootTimer_timeout():
 		loot.position = position + Vector2(rand_x, rand_y)
 		get_tree().current_scene.add_child(loot)
 
-func take_damage(damage: int):
-	health -= damage
+func take_damage(damage):
+	GameState.remove_health(damage)
 	# Make it smaller
 	inner_circle.scale *= 0.97
 

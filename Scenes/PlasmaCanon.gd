@@ -20,15 +20,21 @@ func _input(event):
 		shoot()
 
 func shoot():
+	if GameState.ammunitions <= 0:
+		return
 	var bullet = bullet_scene.instance()
 	bullet.position = canon_position.global_position
 	bullet.rotation = rotation
 	bullet.direction = (canon_position.global_position - global_position).normalized()
 	get_tree().current_scene.add_child(bullet)
+	GameState.remove_ammunition()
 	
 
 func launch_astronaut():
+	if GameState.available_astronauts <= 0:
+		return
 	var astro = astronaut_scene.instance()
 	astro.position = shuttle.global_position
 	astro.direction = (global_position - shuttle.global_position).normalized()
 	get_tree().current_scene.add_child(astro)
+	GameState.remove_astronaut()
