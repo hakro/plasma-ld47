@@ -2,6 +2,7 @@ extends Area2D
 
 onready var explosion_anim : AnimatedSprite = $Explosion
 onready var collision : CollisionShape2D = $CollisionShape2D
+onready var explosion_sound = AudioManager.get_node("Explode")
 
 var direction := Vector2()
 const SPEED := 15
@@ -21,6 +22,7 @@ func die():
 	monitoring = false
 	set_process(false)
 	explosion_anim.show()
+	explosion_sound.play()
 	explosion_anim.play("explosion")
 
 func _on_Enemy_body_entered(astronaut : KinematicBody2D):

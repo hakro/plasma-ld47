@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 onready var shuttle : Sprite = $Sprite
 onready var canon_position : Position2D = $Sprite/CanonPosition
+onready var shoot_sound : AudioStreamPlayer = $ShootSound
 
 const astronaut_scene : PackedScene = preload("res://Scenes/Astronaut.tscn")
 const bullet_scene : PackedScene = preload("res://Scenes/Bullet.tscn")
@@ -28,6 +29,8 @@ func shoot():
 	bullet.direction = (canon_position.global_position - global_position).normalized()
 	get_tree().current_scene.add_child(bullet)
 	GameState.remove_ammunition()
+	if not shoot_sound.playing :
+		shoot_sound.play()
 	
 
 func launch_astronaut():

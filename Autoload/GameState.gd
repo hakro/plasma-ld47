@@ -15,7 +15,7 @@ func _ready():
 	reset_game()
 
 func reset_game():
-	planet_health = 10
+	planet_health = 100
 	ammunitions = 10
 	available_astronauts = 7
 	score = 0
