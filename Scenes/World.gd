@@ -21,3 +21,7 @@ func on_available_astronauts_changed():
 
 func on_ammunitions_changed():
 	ammunitions_label.text = str(GameState.ammunitions)
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://Scenes/MainMenu.tscn")
