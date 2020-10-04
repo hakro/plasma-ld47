@@ -3,6 +3,7 @@ extends Node2D
 onready var health_label : Label = $HUD/HealthLabel
 onready var astronauts_label : Label = $HUD/AstronautsLabel
 onready var ammunitions_label : Label = $HUD/AmmunitionsLabel
+onready var score_label : Label = $Score/Value
 onready var game_over_panel : Panel = $GameOver
 
 func _ready():
@@ -13,6 +14,7 @@ func _ready():
 	GameState.connect("planet_health_changed", self, "on_planet_health_changed")
 	GameState.connect("available_astronauts_changed", self, "on_available_astronauts_changed")
 	GameState.connect("ammunitions_changed", self, "on_ammunitions_changed")
+	GameState.connect("score_changed", self, "on_score_changed")
 	GameState.connect("game_over", self, "on_game_over")
 
 func on_planet_health_changed():
@@ -23,6 +25,9 @@ func on_available_astronauts_changed():
 
 func on_ammunitions_changed():
 	ammunitions_label.text = str(GameState.ammunitions)
+
+func on_score_changed():
+	score_label.text = str(GameState.score)
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):

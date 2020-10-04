@@ -7,5 +7,6 @@ func _process(delta):
 	position += direction * SPEED * delta
 
 func _on_Bullet_area_entered(enemy : Area2D):
+	GameState.add_score()
 	enemy.die()
 	queue_free()

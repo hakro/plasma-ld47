@@ -25,6 +25,7 @@ func die():
 
 func _on_Enemy_body_entered(astronaut : KinematicBody2D):
 	astronaut.die()
+	GameState.add_score(500)
 	die()
 
 func _on_Explosion_animation_finished():
