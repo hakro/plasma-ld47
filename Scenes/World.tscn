@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/PlasmaCanon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/EnemySpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Images/Bullet.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Images/Astronaut.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Images/Heart.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Fonts/Pixeled-6.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Scenes/World.gd" type="Script" id=9]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Planet" parent="." instance=ExtResource( 1 )]
 position = Vector2( 160, 90 )
@@ -34,3 +41,72 @@ position = Vector2( 290.22, 229.278 )
 
 [node name="EnemySpawner8" parent="Spawners" instance=ExtResource( 3 )]
 position = Vector2( 8.22025, 232.278 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 104.551, 90.0147 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 79.8018, 129.613 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -16.0585, -2.68022 )
+
+[node name="HUD" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.619608 )
+margin_left = 6.0
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 45.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Heart" type="Sprite" parent="HUD"]
+position = Vector2( 6.85969, 6.26602 )
+texture = ExtResource( 7 )
+
+[node name="HealthLabel" type="Label" parent="HUD"]
+margin_left = 17.0722
+margin_top = -3.94654
+margin_right = 34.0722
+margin_bottom = 14.0535
+custom_fonts/font = ExtResource( 8 )
+text = "xx"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Astronaut" type="Sprite" parent="HUD"]
+position = Vector2( 7.10644, 19.1352 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 9, 0, 8.85858, 10.0658 )
+
+[node name="AstronautsLabel" type="Label" parent="HUD"]
+margin_left = 17.249
+margin_top = 10.3646
+margin_right = 34.249
+margin_bottom = 28.3646
+custom_fonts/font = ExtResource( 8 )
+text = "xx"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bullet" type="Sprite" parent="HUD"]
+position = Vector2( 6.5923, 33.0358 )
+scale = Vector2( 2.26277, 2.26277 )
+texture = ExtResource( 5 )
+
+[node name="BulletsLabel" type="Label" parent="HUD"]
+margin_left = 17.0722
+margin_top = 22.6811
+margin_right = 34.0722
+margin_bottom = 40.6811
+custom_fonts/font = ExtResource( 8 )
+text = "xx"
+__meta__ = {
+"_edit_use_anchors_": false
+}

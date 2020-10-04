@@ -19,6 +19,10 @@ config/name="Plasma"
 run/main_scene="res://Scenes/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameState="*res://Autoload/GameState.gd"
+
 [display]
 
 window/size/width=320
@@ -66,5 +70,5 @@ launch_astronaut={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_clear_color=Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+environment/default_clear_color=Color( 0.027451, 0.0196078, 0.0666667, 1 )
 environment/default_environment="res://default_env.tres"

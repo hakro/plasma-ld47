@@ -5,7 +5,7 @@ onready var canon_position : Position2D = $Sprite/CanonPosition
 
 const astronaut_scene : PackedScene = preload("res://Scenes/Astronaut.tscn")
 const bullet_scene : PackedScene = preload("res://Scenes/Bullet.tscn")
-var rotation_speed : float = 3
+var rotation_speed : float = 2.7
 
 func _process(delta):
 	if Input.is_action_pressed("move_right"):
