@@ -1,7 +1,10 @@
 extends KinematicBody2D
 
 onready var shuttle : Sprite = $Sprite
+onready var canon_position : Position2D = $Sprite/CanonPosition
+
 const astronaut_scene : PackedScene = preload("res://Scenes/Astronaut.tscn")
+const bullet_scene : PackedScene = preload("res://Scenes/Bullet.tscn")
 var rotation_speed : float = 3
 
 func _process(delta):
@@ -13,6 +16,16 @@ func _process(delta):
 func _input(event):
 	if event.is_action_pressed("launch_astronaut"):
 		launch_astronaut()
+	if event.is_action_pressed("shoot"):
+		shoot()
+
+func shoot():
+	var bullet = bullet_scene.instance()
+	bullet.position = canon_position.global_position
+	bullet.rotation = rotation
+	bullet.direction = (canon_position.global_position - global_position).normalized()
+	get_tree().current_scene.add_child(bullet)
+	
 
 func launch_astronaut():
 	var astro = astronaut_scene.instance()

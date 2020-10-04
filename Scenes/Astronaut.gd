@@ -9,4 +9,3 @@ func _process(delta):
 	if collision_info:
 		direction = direction.bounce(collision_info.normal)
 	rotate(2 * delta)
-
