@@ -7,8 +7,8 @@ const max_loot := 2
 const loot_scene : PackedScene = preload("res://Scenes/Loot.tscn")
 
 func _process(delta):
-	inner_circle.rotate(delta * 2)
-	outer_cicrle.rotate(- delta * 1)
+	inner_circle.rotate(delta * 0.1)
+	outer_cicrle.rotate(- delta * 0.2)
 
 # Spawn loot
 func _on_LootTimer_timeout():

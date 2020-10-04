@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Shuttle.png" type="Texture" id=1]
-[ext_resource path="res://Scenes/Shuttle.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/PlasmaCanon.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.63074, 1.6678 )
+extents = Vector2( 7.63074, 0.981888 )
 
 [node name="Shuttle" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -26 )
+position = Vector2( 0, -31 )
 texture = ExtResource( 1 )
 offset = Vector2( 0.0205746, -6.10287 )
 
@@ -18,5 +18,5 @@ offset = Vector2( 0.0205746, -6.10287 )
 position = Vector2( 0, -12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -27.612 )
+position = Vector2( 0, -32 )
 shape = SubResource( 1 )
