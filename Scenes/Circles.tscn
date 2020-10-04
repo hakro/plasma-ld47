@@ -17,3 +17,7 @@ texture = ExtResource( 1 )
 [node name="InnerCircle" type="Sprite" parent="."]
 modulate = Color( 0.847059, 0.741176, 0.741176, 1 )
 texture = ExtResource( 2 )
+
+[node name="LootTimer" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="LootTimer" to="." method="_on_LootTimer_timeout"]
