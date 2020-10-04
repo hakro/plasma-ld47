@@ -32,13 +32,15 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "shine",
-"speed": 15.0
+"speed": 10.0
 } ]
 
 [sub_resource type="CircleShape2D" id=8]
-radius = 1.57865
+radius = 2.31746
 
-[node name="Loot" type="Area2D"]
+[node name="Loot" type="Area2D" groups=[
+"loot",
+]]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -46,7 +48,7 @@ modulate = Color( 0.811765, 0.835294, 0.0745098, 1 )
 position = Vector2( -0.458851, -0.417137 )
 frames = SubResource( 7 )
 animation = "shine"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
